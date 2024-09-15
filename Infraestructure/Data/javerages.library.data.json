@@ -1,0 +1,10 @@
+{
+    "Loggin":{
+        "LogLevel":{
+            "Defaul":"Information",
+            "Microsoft.AspNetCore":"Warning"
+        },
+        "AllowebHosts":"*",
+        "dataBank": "Infraestructure\\Data\\javerages.library.data.json"
+    }
+}

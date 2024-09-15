@@ -1,5 +1,6 @@
 using mangas.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using mangas.Services.Features.Mangas;
 
 namespace mangas.Controllers.V1;
 
@@ -16,7 +17,8 @@ public class MangaController : ControllerBase
     [HttpGet]
     public IActionResult GetAll()
     {
-        return Ok(_mangaService.GetALL());
+        var mangas = _mangaService.GetAll();
+        return Ok(mangas);
     }
     [HttpGet("{id:int}")] 
     public IActionResult GetById([FromRoute]int id)
